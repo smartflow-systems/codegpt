@@ -1,0 +1,34 @@
+run = "npm start"
+entrypoint = "server.js"
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "npm start"]
+
+[languages]
+[languages.javascript]
+pattern = "**/*.{js,jsx,ts,tsx,json}"
+syntax = "javascript"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
+
+[env]
+PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
+npm_config_prefix = "/home/runner/$REPL_SLUG/.config/npm/node_global"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+enabledForHosting = false
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", "package.json"]
+
+[unitTest]
+language = "nodejs"
