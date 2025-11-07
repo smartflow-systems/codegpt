@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeGPT + SmartFlow</title>
+  <link rel="stylesheet" href="styles/smartflow-theme.css" />
+  <link rel="stylesheet" href="styles/utilities.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 1rem 0;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass-card {
+      padding: 2rem;
+      border-radius: 1rem;
+      margin: 2rem 0;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .feature {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 215, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+    .feature:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 215, 0, 0.3);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .feature-title {
+      color: var(--sf-gold);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .feature-desc {
+      color: var(--sf-beige);
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="circuit-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;opacity:0.4;"></canvas>
+
+  <div class="container">
+    <h1>SmartFlow × CodeGPT</h1>
+
+    <div class="glass-card hover-elevate">
+      <h2 style="color: var(--sf-gold); margin-top: 0;">SFS Theme Fully Applied</h2>
+      <p style="color: var(--sf-beige); line-height: 1.6;">
+        Experience the premium SmartFlow Systems design with animated circuit backgrounds,
+        glassmorphic cards, and elegant gold accents.
+      </p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🎨</div>
+        <div class="feature-title">Brand Tokens</div>
+        <div class="feature-desc">Complete SFS color palette & typography</div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">✨</div>
+        <div class="feature-title">Glass Effects</div>
+        <div class="feature-desc">Frosted glass cards with elevation</div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🌊</div>
+        <div class="feature-title">Circuit Flow</div>
+        <div class="feature-desc">Animated golden circuit background</div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Performance</div>
+        <div class="feature-desc">Optimized canvas animations</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem; padding: 1.5rem; background: rgba(255, 215, 0, 0.05); border-radius: 0.5rem; border: 1px solid rgba(255, 215, 0, 0.15);">
+      <p style="color: var(--sf-gold); font-weight: 600; margin: 0 0 0.5rem 0;">
+        🚀 Ready for Development
+      </p>
+      <p style="color: var(--sf-beige); font-size: 0.875rem; margin: 0; opacity: 0.9;">
+        Theme assets loaded • Circuit animation active • Glass utilities ready
+      </p>
+    </div>
+  </div>
+
+  <script src="scripts/sfs-circuit-flow.js"></script>
+</body>
+</html>
